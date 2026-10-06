@@ -52,9 +52,13 @@ To ingest this repository into Onyx:
    ```
    https://raw.githubusercontent.com/Oht8wooWi8yait9n/taskbook/main/taskbook_sitemap.xml
    ```
-4. Set crawling frequency (e.g., Weekly).
-5. Attach the connector to your desired **Document Set** (e.g. `NASA Task Book`) and link it to **Persona 22 (`Taskbook`)**.
-6. Trigger an initial sync. Onyx will index all 2,918 static research projects with rich titles, metadata, and direct source-of-truth citations.
+4. Under **URL Rewrites** (in Advanced Options), add a prefix rewrite rule so citations in Onyx point directly to NASA:
+   * **Source Prefix**: `https://oht8woowi8yait9n.github.io/taskbook/tasks/`
+   * **Target Prefix**: `https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&TASKID=`
+   *(Note: Every static card also has `<link rel="canonical">` and automatic human-browser forwarding as a fallback).*
+5. Set crawling frequency (e.g., Weekly).
+6. Attach the connector to your desired **Document Set** (e.g. `NASA Task Book`) and link it to **Persona 22 (`Taskbook`)**.
+7. Trigger an initial sync. Onyx will index all 2,918 static research projects with rich titles, metadata, and direct source-of-truth citations.
 
 ## Running Locally
 

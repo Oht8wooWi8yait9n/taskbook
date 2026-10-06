@@ -314,7 +314,7 @@ def fetch_task_details(session: TaskBookSession, task_meta: dict, fetch_network:
     if not title:
         title = task_meta.get("title", "")
     # Remove trailing button text
-    title = re.sub(r"\s+Reduce\s*Images?.*$", "", title, flags=re.IGNORECASE).strip()
+    title = re.sub(r"\s+Reduce(\s*Images?.*)?$", "", title, flags=re.IGNORECASE).strip()
 
     raw_dates = task_meta.get("dates", "").replace("<br>", " ")
     date_parts = raw_dates.split()
@@ -372,7 +372,7 @@ def fetch_task_details(session: TaskBookSession, task_meta: dict, fetch_network:
 
     live_url = f"{INDEX_URL}?action=public_query_taskbook_content&TASKID={tid}"
     pdf_url = f"{PDF_BASE_URL}?id={tid}"
-    gh_pages_url = f"{GH_PAGES_BASE}/tasks/{tid}.html"
+    gh_pages_url = f"{GH_PAGES_BASE}/tasks/{tid}"
 
     # Assemble structured object
     return {
@@ -435,6 +435,7 @@ def render_html_page(task: dict) -> str:
     impact = escape(task["research_impact"] or "No research impact/Earth benefits recorded.")
     progress = escape(task["task_progress"] or "No progress report recorded.")
     bib = escape(task["bibliography"] or "None recorded.")
+    raw_live_url = task["live_url"]
     live_url = escape(task["live_url"])
     pdf_url = escape(task["pdf_url"])
 
@@ -449,6 +450,16 @@ def render_html_page(task: dict) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NASA Task Book: {title}</title>
+  <link rel="canonical" href="{live_url}">
+  <meta property="og:url" content="{live_url}">
+  <meta property="og:title" content="{title}">
+  <meta property="og:site_name" content="NASA Task Book">
+  <script>
+    // Seamlessly forward human visitors directly to the official NASA Task Book page
+    if (!navigator.webdriver && !/bot|crawl|spider|slurp|facebookexternalhit/i.test(navigator.userAgent)) {{
+      window.location.replace("{raw_live_url}");
+    }}
+  </script>
   <style>
     :root {{
       --nasa-blue: #0b3d91;
@@ -1188,7 +1199,7 @@ def main():
         tid = t_meta["task_id"]
         html_file = TASKS_DIR / f"{tid}.html"
 
-        if tid in completed_map and html_file.exists():
+        if tid in completed_map:
             full_task = completed_map[tid]
         else:
             should_fetch_network = (network_fetches_count < fetch_limit) and not (RAW_CACHE_DIR / f"{tid}.html").exists()
@@ -1196,14 +1207,16 @@ def main():
                 full_task = fetch_task_details(session, t_meta, fetch_network=should_fetch_network)
                 if should_fetch_network:
                     network_fetches_count += 1
-                # Render HTML card
-                html_content = render_html_page(full_task)
-                with open(html_file, "w", encoding="utf-8") as f:
-                    f.write(html_content)
                 completed_map[tid] = full_task
             except Exception as e:
                 print(f"\n[!] Failed to harvest task {tid} ({t_meta.get('title')}): {e}")
                 continue
+
+        full_task["gh_pages_url"] = f"{GH_PAGES_BASE}/tasks/{tid}"
+        # Render HTML card
+        html_content = render_html_page(full_task)
+        with open(html_file, "w", encoding="utf-8") as f:
+            f.write(html_content)
 
         full_tasks.append(full_task)
 
