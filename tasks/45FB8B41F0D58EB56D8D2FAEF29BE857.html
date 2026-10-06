@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Task Book: National Center For Space Exploration Research (NCSER) Reduce</title>
+  <style>
+    :root {
+      --nasa-blue: #0b3d91;
+      --nasa-red: #d83933;
+      --text-dark: #1b1b1b;
+      --bg-light: #f8f9fa;
+      --card-bg: #ffffff;
+      --border-color: #dfe1e5;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: var(--nasa-blue);
+      color: white;
+      padding: 1.25rem 2rem;
+      border-bottom: 4px solid var(--nasa-red);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    header a {
+      color: #90caf9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .citation-box {
+      background-color: #e8f0fe;
+      border-left: 5px solid var(--nasa-blue);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+    .citation-box a {
+      color: var(--nasa-blue);
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: var(--nasa-blue);
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      color: #333;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .badge {
+      background: #e9ecef;
+      color: #495057;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .badge-primary {
+      background: var(--nasa-blue);
+      color: white;
+    }
+    .badge-secondary {
+      background: var(--nasa-red);
+      color: white;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .meta-item {
+      background: #fdfdfd;
+      border: 1px solid #f0f0f0;
+      padding: 0.75rem;
+      border-radius: 4px;
+    }
+    .meta-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #6c757d;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .meta-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    p {
+      margin: 0.75rem 0;
+      text-align: justify;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+    .btn-primary {
+      background-color: var(--nasa-blue);
+      color: white;
+    }
+    .btn-outline {
+      background-color: white;
+      color: var(--nasa-blue);
+      border: 1px solid var(--nasa-blue);
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #6c757d;
+      border-top: 1px solid var(--border-color);
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <h1>NASA Task Book</h1>
+      <a href="../index.html">&larr; Back to Task Catalog</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="citation-box">
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Authoritative NASA Source:</strong>
+        <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45FB8B41F0D58EB56D8D2FAEF29BE857" target="_blank" rel="noopener noreferrer">https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45FB8B41F0D58EB56D8D2FAEF29BE857</a>
+      </div>
+      <div>
+        <strong>Official PDF Report:</strong>
+        <a href="https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=45FB8B41F0D58EB56D8D2FAEF29BE857" target="_blank" rel="noopener noreferrer">https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=45FB8B41F0D58EB56D8D2FAEF29BE857</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge badge-primary">Physical Sciences</span>
+        <span class="badge badge-secondary">FY 2008</span>
+        <span class="badge">Task ID: 45FB8B41F0D58EB56D8D2FAEF29BE857</span>
+      </div>
+
+      <h2>National Center For Space Exploration Research (NCSER) Reduce</h2>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Principal Investigator</span>
+          <span class="meta-value">Alexander, J. Iwan D. Ph.D.</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Affiliation / Organization</span>
+          <span class="meta-value">Alexander, J. Iwan D. Ph.D. / Case Western Reserve University</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Discipline / Element</span>
+          <span class="meta-value">Physical Sciences : FLUID PHYSICS--Biofluids</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Period of Performance</span>
+          <span class="meta-value">05/28/2002 &ndash; 06/30/2008</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Grant / Contract No.</span>
+          <span class="meta-value">NCC3 975</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Responsible Center</span>
+          <span class="meta-value">NASA GRC</span>
+        </div>
+      </div>
+
+      
+
+      <div style="margin-top: 1rem;">
+        <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45FB8B41F0D58EB56D8D2FAEF29BE857" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Live on NASA Task Book</a>
+        <a href="https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=45FB8B41F0D58EB56D8D2FAEF29BE857" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Download Task Book PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Project Information & Administration</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Solicitation / Funding Source</span>
+          <span class="meta-value">OTHER</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Project Type</span>
+          <span class="meta-value">Ground</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Grant Monitor</span>
+          <span class="meta-value">N/A</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Task Last Updated</span>
+          <span class="meta-value">08/01/2009</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Task Description</h2>
+      <p>NCSER is a non-profit organization, created in 1997 as the National Center for Microgravity Research under the sponsorship of NASA through a cooperative agreement with Universities Space Research Association (USRA) and Case Western Reserve University. The NCSER is physically located on the campus of CWRU and at NASA GRC where NCSER scientists and engineers are work together with GRC personnel. The role of the NCSER is to • Perform research in fluids and combustion to support NASA’s space program and related national initiatives • Increase awareness of microgravity research and enhance its scientific, technological, educational, and economic impacts • Support the development of enabling technologies for space exploration Originally chartered with supporting and developing NASA microgravity experiments on the ‘shuttle’ and ISS, the combined NCSER expertise in fluids and combustion processes in reduced gravity (i.e., microgravity, Lunar and Martian gravity) is second to none. Our current in-house expertise includes fluids management and control in reduced gravity, reduced gravity combustion processes; microfluidics, heat transfer and phase change processes; computational multiphase fluid dynamics and heat and mass transfer, computational simulation of biomedical processes in support of the ‘Digital Astronaut’ for autonomous space medicine. NCSER scientists and engineers are currently engaged in long term research related to NASA’s exploration vision: Current investigations include: fire safety- flammability, suppression and detection, propellant management, and fluids processes for advanced human support technologies.</p>
+    </div>
+
+    <div class="card">
+      <h2>Research Impact & Earth Benefits</h2>
+      <p>No research impact/Earth benefits recorded.</p>
+    </div>
+
+    <div class="card">
+      <h2>Task Progress Report</h2>
+      <p>NCSER was formed in February 2005, evolving from the former National Center for Microgravity Research (NCMR) in response to NASA’s new research focus in its Vision for Space Exploration (VSE) and in order to better address topics of relevance. The NCMR was originally chartered with supporting NASA’s microgravity research programs in fluids and combustion and facilitated fluids and combustion research by assembling a cadre of in-house subject matter expertise in these areas, and by serving as Technical Monitors for grants, Project Scientists, and project support staff for flight experiments. From 1997 to 2007, NCSER staff members were Principal Investigators (PIs) and Co-investigators (Co-Is) on numerous competitively awarded grants. An independent review panel convened by Dr. Eugene Trinh, then Chief of NASA’s microgravity science division in 2002, stated that “NCMR is a vital and successful operation, effectively supporting NASA’s program in many ways” and encouraged NASA to “regard NCMR as a kind of small-scale laboratory of innovative research management”. Dr. Trinh concluded, “The Center has performed with distinction in its core responsibilities of supporting NASA’s research programs in fluids and combustion”. More recently, as NASA has risen to the challenge of adjusting to its new role in space exploration, NCSER scientists and engineers have responded by successfully shifting focus and transitioning from activities conducted under NASA’s former microgravity research program to critically new research and technology development relevant to space exploration. The flexibility and responsiveness demonstrated in this transition is due to the breadth of science and engineering disciplines resident within NSCER and their relevance to exploration systems technology developments at GRC and other NASA centers. Indeed, NCSER’s past experience with the effects of the space environment, especially reduced gravity effects on multiphase fluid and reacting flow processes associated with exploration systems and technologies, is directly applicable to ongoing and anticipated exploration research and technology development and for defining and/or designing methods to mitigate the negative effects of the space environment. During the period 2006-2008 amid NASA’s restructuring of their programs at Glenn Research Center, the NCSER underwent a change in focus, moving away from a large role in supporting ISS microgravity research and toward research motivated by space exploration technology needs and challenges.. In particular, our staff scientists were able to apply their expertise in reduced-gravity fluids, combustion and reacting flow processes to research related to spacecraft thermal and fluid systems, fire safety and astronaut health. The NCSER focused around five activities during the period 2006-2008: • Exploration Systems Technology Research • Engineering Research Support • ISS Research and Pl support • Workshop and Conference Organization and Support Because of its core competencies in the physical/chemical sciences and expertise in low-gravity fluids transport, combustion and reacting flow phenomena, the NCSER has established partnerships to deal with a broad spectrum of problems related to the development of enabling technologies for space exploration. These problems range from thermal control, water management and waste processing in life support systems, to fire safety, to multiphase fluid management in power and propulsion, in-situ resource utilization and on to bioscience and medical technologies and counter-measures. NCSER was operated through Cooperative Agreement NCC3-975 that continued through June 30th, 2008. The NCSER is a collaborative arrangement between the Universities Space Research Association (USRA), Case Western Reserve University and NASA Glenn Research Center (GRC). It combines the breadth and depth of USRA’s nationally distributed organization with two of Northeast Ohio’s research powerhouses to produce a potent combination of skills and expertise in reduced gravity fluids and combustion research that is applied to problems of significance. Thus, NCSER provides research avenues that, by filling gaps in knowledge, will lead to an important foundation upon which broadly applicable new technologies can be developed for use in future systems developed by various NASA Enterprises.</p>
+    </div>
+
+    <div class="card">
+      <h2>Cumulative Bibliography & Citations</h2>
+      <p>Description: (Last Updated: 04/21/2017)  Articles in Peer-reviewed Journals Slobozhanin LA, Alexander JID, Collicott SH, Gonzalez SR. &quot;Capillary pressure of a liquid in a layer of close-packed uniform spheres.&quot; Phys Fluids. 2006 Aug;18(8):082105. http://dx.doi.org/10.1063/1.2236123 , Aug-2006 Articles in Peer-reviewed Journals Slobozhanin LA, Alexander JID. &quot;The stability of two connected drops suspended from the edges of circular holes.&quot; Journal of Fluid Mechanics. 2006 Sep;563:319-55. http://dx.doi.org/10.1017/S002211200600125X , Sep-2006 Articles in Peer-reviewed Journals Chang Q, Alexander JID. &quot;Analysis of single droplet dynamics on striped surface domains using a lattice Boltzmann method.&quot; Microfluidics and Nanofluidics. 2006 Jul;2(4):309-26. http://dx.doi.org/10.1007/s10404-005-0075-2 , Jul-2006 Articles in Peer-reviewed Journals Chang Q, Alexander JID. &quot;Application of the lattice Boltzmann method to two-phase Rayleigh-Benard convection with a deformable interface.&quot; Journal of Computational Physics. 2006 Mar;212(2):473-89. http://dx.doi.org/10.1016/j.jcp.2005.05.031 , Mar-2006 Articles in Peer-reviewed Journals Garandet JP, Boutet G, Lehmann P, Drevet B, Camel D, Rouzaud A, Favier JJ, Faivre G, Coriell S, Alexander JID, Billia B. &quot;Morphological stability of a solid–liquid interface and cellular growth: Insights from thermoelectric measurements in microgravity experiments.&quot; Journal of Crystal Growth. 2005 May 15;279(1-2):195-205. http://dx.doi.org/10.1016/j.jcrysgro.2005.01.108 , May-2005 Articles in Peer-reviewed Journals Kassemi M, Barsi S, Alexander JID, Banish MR. &quot;Contamination of microgravity liquid diffusivity measurements by void-generated thermocapillary convection.&quot; Journal of Crystal Growth. 2005 Apr 1;276(3-4):621-34. http://dx.doi.org/10.1016/j.jcrysgro.2004.11.426 , Apr-2005 Articles in Peer-reviewed Journals Steinberg SL, Kluitenberg GJ, Jones SB, Daidzic NE, Reddi LN, Xiao M, Tuller M, Newman RM, Or D, Alexander JI. &quot;Physical and hydraulic properties of baked ceramic aggregates used for plant growth medium.&quot; J Am Soc Hortic Sci. 2005 Sep;130(5):767-74. PMID: 16173159 , Sep-2005 Articles in Peer-reviewed Journals Anderson EJ, Kaliyamoorthy S, Iwan J, Alexander D, Knothe Tate ML. &quot;Nano-microscale models of periosteocytic flow show differences in stresses imparted to cell body and processes.&quot; Ann Biomed Eng. 2005 Jan;33(1):52-62. PMID: 15709705 , Jan-2005 Articles in Peer-reviewed Journals Balasubramaniam R, Nayagam V, Hasan MM, Khan L. &quot;Analysis of heat and mass transfer during condensation over a porous substrate.&quot; Ann N Y Acad Sci. 2006 Sep;1077:459-70. PMID: 17124141 , Sep-2006 Articles in Peer-reviewed Journals Hicks M, Lauver R, Hegde U, Hall DG, Sikora TJ. &quot;Gravity effects on premixed and diffusion-limited supercritical water oxidation.&quot; SAE Transactions, Journal of Aerospace. 2006 Aug;114(1):509-17. , Aug-2006 Articles in Peer-reviewed Journals Lock AJ, Briones AM, Qin X, Aggarwal SK, Puri IK, Hegde U. &quot;Liftoff characteristics of partially premixed flames under normal and microgravity conditions.&quot; Combustion and Flame. 2005 Nov;143(3):159-73. http://dx.doi.org/10.1016/j.combustflame.2005.05.011 , Nov-2005 Articles in Peer-reviewed Journals Parsons-Wingerter P, Chandrasekharan UM, McKay TL, Radhakrishnan K, DiCorleto PE, Albarran B, Farr AG. &quot;A VEGF165-induced phenotypic switch from increased vessel density to increased vessel diameter and increased endothelial NOS activity.&quot; Microvasc Res. 2006 Nov;72(3):91-100. Epub 2006 Jul 26. PMID: 16872639 , Nov-2006 Articles in Peer-reviewed Journals Parsons-Wingerter P, McKay TL, Leontiev D, Vickerman MB, Condrich TK, Dicorleto PE. &quot;Lymphangiogenesis by blind-ended vessel sprouting is concurrent with hemangiogenesis by vascular splitting.&quot; Anat Rec A Discov Mol Cell Evol Biol. 2006 Mar;288(3):233-47. PMID: 16489601 , Mar-2006 Articles in Peer-reviewed Journals Meyer WV, Smart AE, Wegdam GH, Brown RG, Dogariu A. &quot;Photon correlation and scattering: introduction to the feature issue.&quot; Appl Opt. 2006 Apr 1;45(10):2149-54. PMID: 16607978 , Apr-2006 Articles in Peer-reviewed Journals Vailati A, Cerbino R, Mazzoni S, Giglio M, Nikolaenko G, Takacs CJ, Cannell DS, Meyer WV, Smart AE. &quot;Gradient-driven fluctuations experiment: fluid fluctuations in microgravity.&quot; Appl Opt. 2006 Apr 1;45(10):2155-65. PMID: 16607979 , Apr-2006 Articles in Peer-reviewed Journals Meyer WV, Mann JA Jr, Wegdam GH. &quot;Surface response functions for a thin-film between fluids with infinite boundaries and for a fluid-fluid interface between finite boundaries.&quot; Appl Opt. 2006 Apr 1;45(10):2174-85. PMID: 16607981 , Apr-2006 Articles in Peer-reviewed Journals Olson SL, Miller FJ, Wichman IS. &quot;Characterizing fingering flamelets using the logistic model.&quot; Combustion Theory and Modelling. 2006 Apr;10(2):323-47. http://dx.doi.org/10.1080/13647830600565446 , Apr-2006 Articles in Peer-reviewed Journals Watson JK, Struk PM, Pettegrew RD, Downs RS. &quot;Experimental investigation of solder joint defect formation and mitigation in reduced-gravity environments.&quot; AIAA Journal of Spacecraft and Rockets 2007 Jan-Feb;44(1):174-82. http://dx.doi.org/10.2514/1.22842 , Jan-2007 Articles in Peer-reviewed Journals Takahashi F, Katta VR. &quot;Structure of propagating edge diffusion flames in hydrocarbon fuel jets.&quot; Proceedings of the Combustion Institute. 2005 Jan; 30(1): 375-82. http://dx.doi.org/10.1016/j.proci.2004.08.227 , Jan-2005 Articles in Peer-reviewed Journals Katta VR, Takahashi F, Linteris G. &quot;Fire-suppression characteristics of CF3H in a cup burner.&quot; Combustion and Flame. 2006 Mar;144(4):645-51. http://dx.doi.org/10.1016/j.combustflame.2005.09.006 , Mar-2006 Articles in Peer-reviewed Journals Takahashi F, Linteris GT, Katta VR. &quot;Extinguishment mechanisms of coflow diffusion flames in a cup-burner apparatus.&quot; Proceedings of the Combustion Institute. 2007 Jan;31(2):2721-9. http://dx.doi.org/10.1016/j.proci.2006.08.112 , Jan-2007 Articles in Peer-reviewed Journals Takahashi F, Linteris GT, Katta VR. &quot;Vortex-coupled oscillations of edge diffusion flames in coflowing air with dilution.&quot; Proceedings of the Combustion Institute. 2007 Jan;31(1):1575-82. http://dx.doi.org/10.1016/j.proci.2006.07.227 , Jan-2007 Articles in Peer-reviewed Journals Linteris GT, Takahashi F, Katta VR. &quot;Cup-burner flame extinguishment by CF3Br and Br2.&quot; Combustion and Flame. 2007 Apr;149(1-2):91-103. http://dx.doi.org/10.1016/j.combustflame.2006.12.013 , Apr-2007 Articles in Peer-reviewed Journals Kleinhenz J, Ferkul P, Pettegrew R, Sacksteder KR, T&#x27;ien JS. &quot;One-sided flame spread phenomena of a thermally thin composite cotton/fiberglass fabric.&quot; Fire and Materials. 2005 Jan-Feb;29(1):27-37. http://dx.doi.org/10.1002/fam.870 , Jan-2005 Articles in Peer-reviewed Journals Tolejko K, Feier I, T’ien JS. &quot;Effects of fuel Lewis number on flame spread over solids.&quot; Proceedings of the Combustion Institute. 2005 Jan;30(2):2263-70. http://dx.doi.org/10.1016/j.proci.2004.08.129 , Jan-2005 Articles in Peer-reviewed Journals Han B, Ibarreta AF, Sung CJ, T’ien JS. &quot;Experimental low-stretch gaseous diffusion flames in buoyancy-induced flowfields.&quot; Proceedings of the Combustion Institute. 2005 Jan;30(1):527-35. http://dx.doi.org/10.1016/j.proci.2004.08.019 , Jan-2005 Articles in Peer-reviewed Journals Nanduri JR, Sung CJ, T&#x27;ien JS. &quot;Structure and dynamic response of radiative diffusion flames.&quot; Combustion Theory and Modelling. 2005 Aug;9(3):515-48. http://dx.doi.org/10.1080/13647830500277373 , Aug-2005 Articles in Peer-reviewed Journals Kumar A, T&#x27;ien JS. &quot;A computational study of low oxygen flammability limit for thick solid slabs.&quot; Combustion and Flame. 2006 Jul;146(1-2):366-78. http://dx.doi.org/10.1016/j.combustflame.2006.02.008 , Jul-2006 Articles in Peer-reviewed Journals Seevaratnam GK, Walker LM, Ramé E, Garoff S. &quot;Wetting by simple room-temperature polymer melts: deviations from Newtonian behavior.&quot; Journal of Colloid and Interface Science. 2005 Apr 1;284(1):265-70. PMID: 15752812 , Apr-2005 Articles in Peer-reviewed Journals Vander Wal RL, Berger GM, Mozes SD. &quot;The combined influence of a rough surface and thin fluid film upon the splashing threshold and splash dynamics of a droplet impacting onto them.&quot; Experiments in Fluids. 2006 Jan;40(1):23-32. http://dx.doi.org/10.1007/s00348-005-0043-3 , Jan-2006 Articles in Peer-reviewed Journals Vander Wal RL, Berger GM, Mozes SD. &quot;Droplets splashing upon films of the same fluid of various depths.&quot; Experiments in Fluids. 2006 Jan;40(1):33-52. http://dx.doi.org/10.1007/s00348-005-0044-2 , Jan-2006 Articles in Peer-reviewed Journals Vander Wal RL, Berger GM, Mozes SD. &quot;The splash/non-splash boundary upon a dry surface and thin fluid film.&quot; Experiments in Fluids. 2006 Jan;40(1):53-9. http://dx.doi.org/10.1007/s00348-005-0045-1 , Jan-2006 Articles in Peer-reviewed Journals Bailey AE, Poon WC, Christianson RJ, Schofield AB, Gasser U, Prasad V, Manley S, Segre PN, Cipelletti L, Meyer WV, Doherty MP, Sankaran S, Jankovsky AL, Shiley WL, Bowen JP, Eggers JC, Kurta C, Lorik T Jr, Pusey PN, Weitz DA. &quot;Spinodal decomposition in a model colloid-polymer mixture in microgravity.&quot; Physical Review Letters. 2007 Nov 16;99(20):205701. PMID: 18233160 , Nov-2007 Articles in Peer-reviewed Journals Balasubramaniam R, Subramanian RS. &quot;Thermocapillary convection due to a stationary bubble.&quot; Physics of Fluids 2004 Jul;16(8):3131-7. http://dx.doi.org/10.1063/1.1768091 , Jul-2004 Articles in Peer-reviewed Journals Balasubramaniam R, Subramanian RS. &quot;Thermocapillary migration of a drop: an exact solution with Newtonian interfacial rheology and stretching/shrinkage of interfacial area elements for small Marangoni numbers.&quot; Ann N Y Acad Sci. 2004 Nov;1027:303-10. PMID: 15644363 , Nov-2004 Articles in Peer-reviewed Journals Barsi S, Kassemi M, Alexander JID. &quot;Effects of void-induced convection on interface morphology and segregation during low-g solidification.&quot; International Journal of Heat and Mass Transfer. 2004 Nov;47(23):5129-37. http://dx.doi.org/10.1016/j.ijheatmasstransfer.2004.05.024 , Nov-2004 Articles in Peer-reviewed Journals Chen X, Rame E, Garoff S. &quot;The effects of thin and ultrathin liquid films on dynamic wetting.&quot; Physics of Fluids. 2004 Feb;16(2):287-97. http://dx.doi.org/10.1063/1.1632498 , Feb-2004 Articles in Peer-reviewed Journals Ferkul P, Kleinhenz J, Shih HY, Pettegrew R, Sacksteder K, T’ien J. &quot;Solid fuel combustion experiments in microgravity using a continuous fuel dispenser and related numerical simulations.&quot; Microgravity Science and Technology. 2004 Jun;15(2):3-12. http://dx.doi.org/10.1007/BF02870953 , Jun-2004 Articles in Peer-reviewed Journals Jin F, Balasubramaniam R, Stebe KJ. &quot;Surfactant adsorption to spherical particles: The intrinsic length scale governing the shift from diffusion to kinetic-controlled mass transfer.&quot; Journal of Adhesion. 2004 Sep;80(9):773-96. http://dx.doi.org/10.1080/00218460490480770 , Jan-2004 Articles in Peer-reviewed Journals Kassemi M, Deserranno D, Oas JG. &quot;Effect of gravity on the caloric stimulation of the inner ear.&quot; Ann N Y Acad Sci. 2004 Nov;1027:360-70. PMID: 15644368 , Nov-2004 Articles in Peer-reviewed Journals Kassemi M, Oas JG, Deserranno D. &quot;Fluid-structural dynamics of ground-based and microgravity caloric tests.&quot; J Vestib Res. 2005;15(2):93-107. PMID: 15951623 , Feb-2005 Articles in Peer-reviewed Journals Kassemi M, Panzarella CH. &quot;Ventless pressure control of two-phase propellant tanks in microgravity.&quot; Ann N Y Acad Sci. 2004 Nov;1027:511-28. PMID: 15644378 , Nov-2004 Articles in Peer-reviewed Journals Katta VR, Takahashi F, Linteris GT. &quot;Suppression of cup-burner flames using carbon dioxide in microgravity.&quot; Combustion and Flame. 2004 Jun;137(4):506-22. http://dx.doi.org/10.1016/j.combustflame.2004.01.015 , Jun-2004 Articles in Peer-reviewed Journals Linteris GT, Katta VR, Takahashi F. &quot;Experimental and numerical evaluation of metallic compounds for suppressing cup-burner flames.&quot; Combustion and Flame. 2004 Jul;138(1-2):78-96. http://dx.doi.org/10.1016/j.combustflame.2004.04.003 , Jul-2004 Articles in Peer-reviewed Journals Lock A, Aggarwal SK, Puri IK, Hegde U. &quot;Suppression of fuel and air stream diluted methane–air partially premixed flames in normal and microgravity.&quot; Fire Safety Journal. 2008 Jan;43(1):24-35. http://dx.doi.org/10.1016/j.firesaf.2007.02.004 , Jan-2008 Articles in Peer-reviewed Journals Lock A, Briones AM, Aggarwal SK, Puri IK, Hegde U. &quot;Liftoff and extinction characteristics of fuel- and air-stream-diluted methane–air flames.&quot; Combustion and Flame. 2007 Jun;149(4):340-52. http://dx.doi.org/10.1016/j.combustflame.2007.02.007 , Jun-2007 Articles in Peer-reviewed Journals Lock AJ, Ganguly R, Puri IK, Aggarwal SK, Hegde U. &quot;Gravity effects on partially premixed flames: an experimental-numerical investigation.&quot; Proceedings of the Combustion Institute. 2005 Jan;30(1):511-8. http://dx.doi.org/10.1016/j.proci.2004.08.144 , Jan-2005 Articles in Peer-reviewed Journals Markarian N, Yeksel M, Khusid B, Kumar A, Tin P. &quot;Effects of clinorotation and positive dielectrophoresis on suspensions of heavy particles.&quot; Physics of Fluids. 2004 May;16(5):1826-9. http://dx.doi.org/10.1063/1.1699154 , May-2004 Articles in Peer-reviewed Journals Nayagam V, Williams FA. &quot;Curvature effects on edge-flame propagation in the premixed-flame regime.&quot; Combustion Science and Technology. 2004 Dec;176(12);2125-42. http://dx.doi.org/10.1080/00102200490514976 , Dec-2004 Articles in Peer-reviewed Journals Olson SL, Hegde U, Bhattacharjee S, Deering JL, Tang L, Altenkirch RA. &quot;Sounding rocket microgravity experiments elucidating diffusive and radiative transport effects on flame spread over thermally thick solids.&quot; Combustion Science and Technology. 2004 Apr;176(4):557-84. http://dx.doi.org/10.1080/00102200490276773 , Apr-2004 Articles in Peer-reviewed Journals Panzarella C, Plachta D, Kassemi M. &quot;Pressure control of large cryogenic tanks in microgravity.&quot; Cryogenics. 2004 Jun-Aug;44(6-8):475-83. http://dx.doi.org/10.1016/j.cryogenics.2004.03.009 , Jun-2004 Articles in Peer-reviewed Journals Panzarella CH, Kassemi M. &quot;Self-pressurization of large spherical cryogenic tanks in space.&quot; Journal of Spacecraft and Rockets. 2005 Mar-Apr;42(2):299-308. http://dx.doi.org/10.2514/1.4571 , Mar-2005 Articles in Peer-reviewed Journals Rame E. &quot;The stagnation point in Marangoni-thickened Landau-Levich type flows.&quot; Physics of Fluids. 2007 Jul;19(7):078102. http://dx.doi.org/10.1063/1.2745728 , Jul-2007 Articles in Peer-reviewed Journals Rame E, Garoff S, Willson KR. &quot; Characterizing the microscopic physics near moving contact lines using dynamic contact angle data. &quot; Physical Review E. 2004 Sep;70(3):031608. http://dx.doi.org/10.1103/PhysRevE.70.031608 , Sep-2004 Articles in Peer-reviewed Journals Seevaratnam GK, Suo Y, Ramé E, Walker LM, Garoff S. &quot;Dynamic wetting of shear thinning fluids.&quot; Physics of Fluids. 2007 Jan;19(1):012103. http://dx.doi.org/10.1063/1.2432107 , Jan-2007 Articles in Peer-reviewed Journals Seevaratnam GK, Walker LM, Ramé E, Garoff S. &quot;Wetting by simple room-temperature polymer melts: deviations from Newtonian behavior.&quot; Journal of Colloid and Interface Science. 2005 Apr 1;284(1):265-70. http://dx.doi.org/10.1016/j.jcis.2004.09.056 , Apr-2005 Articles in Peer-reviewed Journals Seevaratnam GK, Walker LM, Ramé E, Garoff S. &quot;Corrigendum to “Wetting by simple room-temperature polymer melts: Deviations from Newtonian behavior” [J. Colloid Interface Sci. 284 (2005) 265–270].&quot; Journal of Colloid and Interface Science. 2006 Sep 15;301(2):706. http://dx.doi.org/10.1016/j.jcis.2006.06.032 , Sep-2006 Articles in Peer-reviewed Journals Sunderland PB, Haylett JE, Urban DL, Nayagam V. &quot;Lengths of laminar jet diffusion flames under elevated gravity.&quot; Combustion and Flame. 2008 Jan;152(1-2):60-8. http://dx.doi.org/10.1016/j.combustflame.2007.08.011 , Jan-2008 Articles in Peer-reviewed Journals Takahashi F, Katta VR. &quot;Further studies of the reaction kernel structure and stabilization of jet diffusion flames.&quot; Proceedings of the Combustion Institute. 2005 Jan;30(1):383-90. http://dx.doi.org/10.1016/j.proci.2004.08.225 , Jan-2005 Articles in Peer-reviewed Journals Tin P, de Groh HC 3rd. &quot;Surface tension and viscosity of succinonitrile– acetone alloys using surface light scattering spectrometer.&quot; International Journal of Thermophysics. 2004 Jul;25(4):1143-53. http://dx.doi.org/10.1023/B:IJOT.0000038506.26409.7f , Jul-2004 Articles in Peer-reviewed Journals Wei Y, Seevaratnam GK, Garoff S, Ramé E, Walker LM. &quot;Dynamic wetting of Boger fluids.&quot; Journal of Colloid and Interface Science. 2007 Sep;313(1):274-80. http://dx.doi.org/10.1016/j.jcis.2007.04.020 , Sep-2007 Articles in Peer-reviewed Journals Villa-Gonzalez M, Marchese AJ, Easton JW, Miller FJ. &quot;Experimental measurements of two-dimensional planar propagating edge flames.&quot; Proceedings of the Combustion Institute. 2007 Jan;31(1):939-46. http://dx.doi.org/10.1016/j.proci.2006.08.039 , Jan-2007 Articles in Peer-reviewed Journals Echekki T, Chen JY, Hegde U. &quot;Numerical investigations of buoyancy effects on triple flame stability.&quot; Combustion Science and Technology. 2004 Mar;176(3):387-407. http://dx.doi.org/10.1080/00102200490270120 , Mar-2004 Articles in Peer-reviewed Journals Manley S, Cipelletti L, Trappe V, Bailey AE, Christianson RJ, Gasser U, Prasad V, Segre PN, Doherty MP, Sankaran S, Jankovsky AL, Shiley B, Bowen J, Eggers J, Kurta C, Lorik T, Weitz DA. &quot;Limits to gelation in colloidal aggregation.&quot; Physical Review Letters. 2004 Sept 3;93(10):108302. http://dx.doi.org/10.1103/PhysRevLett.93.108302 , Sep-2004 Articles in Peer-reviewed Journals Han B, Sung CJ, Nishioka M. &quot;Effects of vitiated air on hydrogen ignition in a high-speed laminar mixing layer.&quot; Combustion Science and Technology. 2004 Mar;176(3):305-30. http://dx.doi.org/10.1080/00102200490256018 , Mar-2004 Articles in Peer-reviewed Journals Huang Y, Sung CJ, Eng JA. &quot;Dilution limits of n-butane/air mixtures under conditions relevant to HCCI combustion.&quot; Combustion and Flame. 2004 Mar;136(4):457-66. http://dx.doi.org/10.1016/j.combustflame.2003.10.011 , Mar-2004 Articles in Peer-reviewed Journals Yu G, Li JG, Zhao JR, Yue LJ, Chang XY, Sung CJ. &quot;An experimental study of kerosene combustion in a supersonic model combustor using effervescent atomization.&quot; Proceedings of the Combustion Institute. 2005 Jan;30(2):2859-66. http://dx.doi.org/10.1016/j.proci.2004.07.050 , Jan-2005 Articles in Peer-reviewed Journals Boyarko GA, Sung CJ, Schneider SJ. &quot;Catalyzed combustion of hydrogen–oxygen in platinum tubes for micro-propulsion applications.&quot; Proceedings of the Combustion Institute. 2005 Jan;30(2):2481-8. http://dx.doi.org/10.1016/j.proci.2004.08.203 , Jan-2005 Articles in Peer-reviewed Journals Huang Y, Sung CJ, Eng JA. &quot;Laminar flame speeds of primary reference fuels and reformer gas mixtures.&quot; Combustion and Flame. 2004 Nov;139(3):239-51. http://dx.doi.org/10.1016/j.combustflame.2004.08.011 , Jan-2004 Articles in Peer-reviewed Journals Hirasawa T, Sung CJ, Yang Z, Joshi A, Wang H. &quot;Effect of ferrocene addition on sooting limits in laminar premixed ethylene–oxygen–argon flames.&quot; Combustion and Flame. 2004 Dec;139(4):288-99. http://dx.doi.org/10.1016/j.combustflame.2004.09.002 , Dec-2004 Articles in Peer-reviewed Journals Ibarreta AF, Sung CJ, Hirasawa T, Wang H. &quot;Burning velocity measurements of microgravity spherical sooting premixed flames using rainbow Schlieren deflectometry.&quot; Combustion and Flame. 2005 Jan;140(1-2):93-102. http://dx.doi.org/10.1016/j.combustflame.2004.10.007 , Jan-2005 Articles in Peer-reviewed Journals Kassemi M, Wang Y, Barsi S, Chung BTF. &quot;Effect of bubble size and location on segregation pattern and interface shape in microgravity crystal growth.&quot; Fluid Dynamics and Materials Processing. 2006;2(1):27-46. http://dx.doi.org/10.3970/fdmp.2006.002.027 , Jan-2006 Articles in Peer-reviewed Journals Zhang J, Wu XL, Rashidnia N. &quot;Thermal radiation and thickness fluctuations in freely suspended liquid films.&quot; Physics of Fluids. 2006 Aug;18(8): 085110. http://dx.doi.org/10.1063/1.2337997 , Aug-2006</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>NASA Task Book Static Mirror &middot; Official NASA Research Projects Catalog &middot; <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45FB8B41F0D58EB56D8D2FAEF29BE857" target="_blank">taskbook.nasaprs.com</a></p>
+  </footer>
+</body>
+</html>

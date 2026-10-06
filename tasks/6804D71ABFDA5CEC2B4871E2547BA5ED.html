@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Task Book: Advanced Displays for Efficient Training and Operation of Robotic Systems</title>
+  <style>
+    :root {
+      --nasa-blue: #0b3d91;
+      --nasa-red: #d83933;
+      --text-dark: #1b1b1b;
+      --bg-light: #f8f9fa;
+      --card-bg: #ffffff;
+      --border-color: #dfe1e5;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: var(--nasa-blue);
+      color: white;
+      padding: 1.25rem 2rem;
+      border-bottom: 4px solid var(--nasa-red);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    header a {
+      color: #90caf9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .citation-box {
+      background-color: #e8f0fe;
+      border-left: 5px solid var(--nasa-blue);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+    .citation-box a {
+      color: var(--nasa-blue);
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: var(--nasa-blue);
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      color: #333;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .badge {
+      background: #e9ecef;
+      color: #495057;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .badge-primary {
+      background: var(--nasa-blue);
+      color: white;
+    }
+    .badge-secondary {
+      background: var(--nasa-red);
+      color: white;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .meta-item {
+      background: #fdfdfd;
+      border: 1px solid #f0f0f0;
+      padding: 0.75rem;
+      border-radius: 4px;
+    }
+    .meta-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #6c757d;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .meta-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    p {
+      margin: 0.75rem 0;
+      text-align: justify;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+    .btn-primary {
+      background-color: var(--nasa-blue);
+      color: white;
+    }
+    .btn-outline {
+      background-color: white;
+      color: var(--nasa-blue);
+      border: 1px solid var(--nasa-blue);
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #6c757d;
+      border-top: 1px solid var(--border-color);
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <h1>NASA Task Book</h1>
+      <a href="../index.html">&larr; Back to Task Catalog</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="citation-box">
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Authoritative NASA Source:</strong>
+        <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=6804D71ABFDA5CEC2B4871E2547BA5ED" target="_blank" rel="noopener noreferrer">https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=6804D71ABFDA5CEC2B4871E2547BA5ED</a>
+      </div>
+      <div>
+        <strong>Official PDF Report:</strong>
+        <a href="https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=6804D71ABFDA5CEC2B4871E2547BA5ED" target="_blank" rel="noopener noreferrer">https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=6804D71ABFDA5CEC2B4871E2547BA5ED</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge badge-primary">Human Research</span>
+        <span class="badge badge-secondary">N/A</span>
+        <span class="badge">Task ID: 6804D71ABFDA5CEC2B4871E2547BA5ED</span>
+      </div>
+
+      <h2>Advanced Displays for Efficient Training and Operation of Robotic Systems</h2>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Principal Investigator</span>
+          <span class="meta-value">Oman, Charles M. Ph.D.</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Affiliation / Organization</span>
+          <span class="meta-value">Massachusetts Institute of Technology</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Discipline / Element</span>
+          <span class="meta-value">N/A</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Period of Performance</span>
+          <span class="meta-value">09/01/2007 &ndash; 09/30/2011</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Grant / Contract No.</span>
+          <span class="meta-value">NCC 9-58-SA01301</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Responsible Center</span>
+          <span class="meta-value">N/A</span>
+        </div>
+      </div>
+
+      
+
+      <div style="margin-top: 1rem;">
+        <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=6804D71ABFDA5CEC2B4871E2547BA5ED" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Live on NASA Task Book</a>
+        <a href="https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=6804D71ABFDA5CEC2B4871E2547BA5ED" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Download Task Book PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Project Information & Administration</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Solicitation / Funding Source</span>
+          <span class="meta-value">N/A</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Project Type</span>
+          <span class="meta-value">N/A</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Grant Monitor</span>
+          <span class="meta-value">N/A</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Task Last Updated</span>
+          <span class="meta-value">02/14/ 2012</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Task Description</h2>
+      <p>No description provided.</p>
+    </div>
+
+    <div class="card">
+      <h2>Research Impact & Earth Benefits</h2>
+      <p>No research impact/Earth benefits recorded.</p>
+    </div>
+
+    <div class="card">
+      <h2>Task Progress Report</h2>
+      <p>No progress report recorded.</p>
+    </div>
+
+    <div class="card">
+      <h2>Cumulative Bibliography & Citations</h2>
+      <p>None recorded.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>NASA Task Book Static Mirror &middot; Official NASA Research Projects Catalog &middot; <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=6804D71ABFDA5CEC2B4871E2547BA5ED" target="_blank">taskbook.nasaprs.com</a></p>
+  </footer>
+</body>
+</html>

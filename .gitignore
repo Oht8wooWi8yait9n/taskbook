@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+ENV/
+.cache/
+.DS_Store
+*.tmp
+.taskbook_cache/raw/

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Task Book: Modeling Phase Change and Thermocapillary Flow in the Constrained Vapor Bubble Experiment Reduce</title>
+  <style>
+    :root {
+      --nasa-blue: #0b3d91;
+      --nasa-red: #d83933;
+      --text-dark: #1b1b1b;
+      --bg-light: #f8f9fa;
+      --card-bg: #ffffff;
+      --border-color: #dfe1e5;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: var(--nasa-blue);
+      color: white;
+      padding: 1.25rem 2rem;
+      border-bottom: 4px solid var(--nasa-red);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    header a {
+      color: #90caf9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .citation-box {
+      background-color: #e8f0fe;
+      border-left: 5px solid var(--nasa-blue);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+    .citation-box a {
+      color: var(--nasa-blue);
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: var(--nasa-blue);
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      color: #333;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .badge {
+      background: #e9ecef;
+      color: #495057;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .badge-primary {
+      background: var(--nasa-blue);
+      color: white;
+    }
+    .badge-secondary {
+      background: var(--nasa-red);
+      color: white;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .meta-item {
+      background: #fdfdfd;
+      border: 1px solid #f0f0f0;
+      padding: 0.75rem;
+      border-radius: 4px;
+    }
+    .meta-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #6c757d;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .meta-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    p {
+      margin: 0.75rem 0;
+      text-align: justify;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+    .btn-primary {
+      background-color: var(--nasa-blue);
+      color: white;
+    }
+    .btn-outline {
+      background-color: white;
+      color: var(--nasa-blue);
+      border: 1px solid var(--nasa-blue);
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #6c757d;
+      border-top: 1px solid var(--border-color);
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <h1>NASA Task Book</h1>
+      <a href="../index.html">&larr; Back to Task Catalog</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="citation-box">
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Authoritative NASA Source:</strong>
+        <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45B48E4FB2565BB360A811CCA9581628" target="_blank" rel="noopener noreferrer">https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45B48E4FB2565BB360A811CCA9581628</a>
+      </div>
+      <div>
+        <strong>Official PDF Report:</strong>
+        <a href="https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=45B48E4FB2565BB360A811CCA9581628" target="_blank" rel="noopener noreferrer">https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=45B48E4FB2565BB360A811CCA9581628</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge badge-primary">Physical Sciences</span>
+        <span class="badge badge-secondary">FY 2021</span>
+        <span class="badge">Task ID: 45B48E4FB2565BB360A811CCA9581628</span>
+      </div>
+
+      <h2>Modeling Phase Change and Thermocapillary Flow in the Constrained Vapor Bubble Experiment Reduce</h2>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Principal Investigator</span>
+          <span class="meta-value">Ajaev, Vladimir Ph.D.</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Affiliation / Organization</span>
+          <span class="meta-value">Ajaev, Vladimir Ph.D. / Southern Methodist University</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Discipline / Element</span>
+          <span class="meta-value">Physical Sciences : FLUID PHYSICS--Fluid physics</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Period of Performance</span>
+          <span class="meta-value">12/22/2017 &ndash; 07/30/2021</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Grant / Contract No.</span>
+          <span class="meta-value">80NSSC18K0332</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Responsible Center</span>
+          <span class="meta-value">NASA GRC</span>
+        </div>
+      </div>
+
+      
+
+      <div style="margin-top: 1rem;">
+        <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45B48E4FB2565BB360A811CCA9581628" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Live on NASA Task Book</a>
+        <a href="https://taskbook.nasaprs.com/tbp/tbpdf.cfm?id=45B48E4FB2565BB360A811CCA9581628" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Download Task Book PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Project Information & Administration</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Solicitation / Funding Source</span>
+          <span class="meta-value">2015-16 Physical Sciences NNH15ZTT001N-15PSI-C: Use of the NASA Physical Sciences Informatics System – Appendix C</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Project Type</span>
+          <span class="meta-value">Ground,Physical Sciences Informatics (PSI)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Grant Monitor</span>
+          <span class="meta-value">Chao, David</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Task Last Updated</span>
+          <span class="meta-value">10/29/2021</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Task Description</h2>
+      <p>We propose theoretical and numerical studies of constrained vapor-liquid interfaces in the presence of phase change, i.e., evaporation and/or condensation. These studies will result in better understanding of heat and mass transfer in two-phase systems in which the effects of capillary forces and thermocapillarity are important. The main focus of the work is on a specific geometric configuration used in a recent space experiment, referred to as a Constrained Vapor Bubble (CVB). We propose to use asymptotic methods to simplify the system of governing equations for fluid flow and heat transfer for this configuration, followed by numerical solutions of the resulting equations using modern computational techniques. The proposed work has a wide range of ground and space applications including two-phase cooling systems for traditional electronic devices such as laptop computers as well as novel thermal management systems for emerging applications such as proton exchange membrane fuel cells and photovoltaic cells for solar energy harvesting. The small length scales in many of these systems imply that interfacial phenomena are very important while the effects of gravity are secondary. Some aspects of the proposed work are also relevant for modeling of physical processes such as self-assembly of colloidal particles from evaporating droplets, condensation of droplets in novel devices for energy conversion, and water desalination. The liquid transport mechanisms by capillary forces are also important to study for space applications, such as advanced cooling systems for spacecraft, since conventional methods for liquid transport can fail or become impractical in such applications. For example, any system that relies on the force of gravity for functioning is likely to fail in the microgravity environment. Transporting liquids by external pressure gradients, while not impossible in space, typically requires mechanical pumps, often making such systems impractical because of the payload weight restrictions.</p>
+    </div>
+
+    <div class="card">
+      <h2>Research Impact & Earth Benefits</h2>
+      <p>The proposed work has a wide range of ground and space applications. These include two-phase cooling systems for traditional electronic devices, such as laptop computers, as well as novel thermal management systems for emerging applications, such as proton exchange membrane fuel cells and photovoltaic cells for solar energy harvesting.</p>
+    </div>
+
+    <div class="card">
+      <h2>Task Progress Report</h2>
+      <p>FINAL REPORTING OCTOBER 2021 The Principal Investigator (Dr. Ajaev) at Southern Methodist University and his graduate student conducted detailed studies of heat transfer and fluid flow in the wedge-flow geometry with parameters corresponding to the Constrained Vapor Bubble (CVB) experiment. Liquid flow velocity and vapor-liquid interface temperatures were determined from the model, resulting in new physical insight into the nature of transport phenomena in the CVB and estimation of the significance of Marangoni stresses. Different values of the heat transfer coefficients are predicted in different parts of the CVB system. The significance of inertia effects in both liquid and gas flow is discussed in connection with formation of the pinch points at the interfaces and central droplets observed in experiments under the conditions of microgravity. Shapes of the central droplets formed away from the two ends of the CVB cuvette have been determined by the Rensselaer Polytechnic Institute (RPI) team from the experimental data, followed by development of novel mathematical models of evaporating/condensing sessile droplets. The models were implemented based on several in-house codes and new subroutines accounting for previously neglected physical effects. In particular, both perfect wetting and partial wetting regimes can be studied by adjusting the non-dimensional parameters in the code. By incorporating the heat conduction in the substrate under the droplet, agreement between theory and experimental data from J. Plawsky’s group (RPI) was obtained. Increase in the contact angle and effects of the heat conduction in the wall are shown to result in reduction of phase change rates near the contact line. Substantial work on data analysis was also conducted at RPI leading to new results on the effect of condenser temperature on the interface shapes. The effect of heater power on the pressure in the system was investigated, leading to identification of three different linear regimes with different slopes. Linear correlation between the location of the central droplet and surface tension gradient is found. The RPI team also conducted new ground-based experiments to study adsorbed films on the walls of the cuvette for different liquids and carried out phase-field numerical simulations to determine liquid-vapor interface shapes for constrained vapor bubbles in rectangular cuvette. ANNUAL REPORTING OCTOBER 2020 Development of comprehensive numerical models of transport processes in the Constrained Vapor Bubble (CVB) system has been the main focus of research of both Southern Methodist University (SMU) and Rensselaer Polytechnic Institute (RPI) teams during the third year of the project. Detailed models of heat transfer in CVB have been developed at SMU and used to infer information about the axial flow rates. The RPI team has been working on analyzing some of the data from CVB-1 and CVB-2 and doing some ground-based experiments, as well as developing 2D and 3D numerical models based on the phase field approach.</p>
+    </div>
+
+    <div class="card">
+      <h2>Cumulative Bibliography & Citations</h2>
+      <p>Description: (Last Updated: 06/13/2025)  Articles in Peer-reviewed Journals Barrett JA, Ajaev VS. &quot;Heat transfer and corner flow in the constrained vapor bubble system.&quot; Interfacial Phenomena and Heat Transfer. 2020;8(4):291-302. https://doi.org/10.1615/InterfacPhenomHeatTransfer.2020035445 , Dec-2020 Articles in Peer-reviewed Journals Bhattacharya S, Woodcock C, Linhardt RJ, Plawsky JL. &quot;Enhanced mandrel design for electrospinning aligned fiber mats from low volatility solvents.&quot; Polym Eng Sci. 2021 Mar;61(3):793-801. https://doi.org/10.1002/pen.25622 , Mar-2021 Articles in Peer-reviewed Journals Barrett JA, Ajaev VS. &quot;The effect of electrical double layers on evaporation of sessile droplets.&quot; J Eng Math. 2022 Jun 15;134:10. https://doi.org/10.1007/s10665-022-10227-6 , Jun-2022 Articles in Peer-reviewed Journals Guo A, Marshall WC, Woodcock CC, Plawsky JL. &quot;Transport in mazes; Simple geometric representations to guide the design of engineered systems.&quot; Chemical Engineering Science. 2022 Mar 15;250:117416. https://doi.org/10.1016/j.ces.2021.117416 , Mar-2022 Dissertations and Theses Barrett JA. &quot;Modeling fluid phenomena in the context of constrained vapor bubble system.&quot; Dissertation, Southern Methodist University, Dallas, TX, December 2020. , Dec-2020</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>NASA Task Book Static Mirror &middot; Official NASA Research Projects Catalog &middot; <a href="https://taskbook.nasaprs.com/tbp/index.cfm?action=public_query_taskbook_content&amp;TASKID=45B48E4FB2565BB360A811CCA9581628" target="_blank">taskbook.nasaprs.com</a></p>
+  </footer>
+</body>
+</html>

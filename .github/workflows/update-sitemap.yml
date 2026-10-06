@@ -1,0 +1,53 @@
+name: Update NASA Task Book Mirror & Sitemap
+
+on:
+  schedule:
+    # Run every Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crawl-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run NASA Task Book Harvester & Generator
+        run: |
+          python generate_taskbook_sitemap.py
+
+      - name: Commit and push updated sitemaps, JSONL & static mirrors
+        run: |
+          git config user.name "Aaron Sells"
+          git config user.email "aaron.b.sells@nasa.gov"
+          git add tasks/ taskbook_tasks.jsonl taskbook_sitemap.xml taskbook_urls.txt taskbook_direct_sitemap.xml taskbook_direct_urls.txt index.html
+          if git diff --staged --quiet; then
+            echo "No changes in NASA Task Book database. Skipping commit."
+          else
+            git commit -m "chore(sync): weekly automated NASA Task Book mirror & sitemap update [skip ci]"
+            for attempt in {1..5}; do
+              echo "Pushing updates to origin main (attempt $attempt)..."
+              if git push origin main; then
+                echo "Successfully pushed updates to origin main."
+                break
+              fi
+              echo "Push failed (attempt $attempt/5). Waiting 5 seconds before retry..."
+              sleep 5
+              git pull --rebase origin main || true
+            done
+          fi
