@@ -730,18 +730,56 @@ def render_html_page(task: dict) -> str:
 """
 
 
+def load_existing_lastmod(sitemap_path) -> dict:
+    """Load existing URL -> lastmod mappings to prevent unnecessary diff churn."""
+    mapping = {}
+    path = Path(sitemap_path)
+    if path.exists():
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                content = f.read()
+            for m in re.finditer(r'<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>', content):
+                raw_loc = m.group(1).strip()
+                unescaped_loc = unescape(raw_loc)
+                val = m.group(2).strip()
+                mapping[raw_loc] = val
+                mapping[unescaped_loc] = val
+        except Exception:
+            pass
+    return mapping
+
+
+def write_if_changed(path, content: str) -> bool:
+    """Write content to path only if changed to avoid updating mtimes and git diffs."""
+    target = Path(path)
+    if target.exists():
+        try:
+            with open(target, "r", encoding="utf-8") as f:
+                if f.read() == content:
+                    return False
+        except Exception:
+            pass
+    with open(target, "w", encoding="utf-8") as f:
+        f.write(content)
+    return True
+
+
 def write_sitemaps(tasks: list[dict]):
     """Generates sitemap.xml and urls.txt for both GitHub Pages and direct NASA URLs."""
     print("[*] Generating dual XML sitemaps and plain text URL lists...")
     now_iso = time.strftime("%Y-%m-%d")
 
+    existing_gh_lastmod = load_existing_lastmod(SITEMAP_PATH)
+    existing_direct_lastmod = load_existing_lastmod(DIRECT_SITEMAP_PATH)
+
+    root_url = f"{escape(GH_PAGES_BASE)}/"
     # 1. GitHub Pages XML Sitemap
     xml_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
         '  <url>',
-        f'    <loc>{escape(GH_PAGES_BASE)}/</loc>',
-        f'    <lastmod>{now_iso}</lastmod>',
+        f'    <loc>{root_url}</loc>',
+        f'    <lastmod>{existing_gh_lastmod.get(f"{GH_PAGES_BASE}/", now_iso)}</lastmod>',
         '    <changefreq>weekly</changefreq>',
         '    <priority>1.0</priority>',
         '  </url>',
@@ -761,16 +799,19 @@ def write_sitemaps(tasks: list[dict]):
         gh_urls.append(gh_url)
         direct_urls.append(live_url)
 
+        m_lastmod = existing_gh_lastmod.get(gh_url, now_iso)
+        d_lastmod = existing_direct_lastmod.get(live_url, now_iso)
+
         xml_lines.append("  <url>")
         xml_lines.append(f"    <loc>{escape(gh_url)}</loc>")
-        xml_lines.append(f"    <lastmod>{now_iso}</lastmod>")
+        xml_lines.append(f"    <lastmod>{m_lastmod}</lastmod>")
         xml_lines.append("    <changefreq>weekly</changefreq>")
         xml_lines.append("    <priority>0.8</priority>")
         xml_lines.append("  </url>")
 
         direct_xml_lines.append("  <url>")
         direct_xml_lines.append(f"    <loc>{escape(live_url)}</loc>")
-        direct_xml_lines.append(f"    <lastmod>{now_iso}</lastmod>")
+        direct_xml_lines.append(f"    <lastmod>{d_lastmod}</lastmod>")
         direct_xml_lines.append("    <changefreq>weekly</changefreq>")
         direct_xml_lines.append("    <priority>0.8</priority>")
         direct_xml_lines.append("  </url>")
@@ -778,20 +819,16 @@ def write_sitemaps(tasks: list[dict]):
     xml_lines.append("</urlset>")
     direct_xml_lines.append("</urlset>")
 
-    with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
-        f.write("\n".join(xml_lines) + "\n")
-    with open(URLS_TXT_PATH, "w", encoding="utf-8") as f:
-        f.write("\n".join(gh_urls) + "\n")
-
-    with open(DIRECT_SITEMAP_PATH, "w", encoding="utf-8") as f:
-        f.write("\n".join(direct_xml_lines) + "\n")
-    with open(DIRECT_URLS_TXT_PATH, "w", encoding="utf-8") as f:
-        f.write("\n".join(direct_urls) + "\n")
+    write_if_changed(SITEMAP_PATH, "\n".join(xml_lines) + "\n")
+    write_if_changed(URLS_TXT_PATH, "\n".join(gh_urls) + "\n")
+    write_if_changed(DIRECT_SITEMAP_PATH, "\n".join(direct_xml_lines) + "\n")
+    write_if_changed(DIRECT_URLS_TXT_PATH, "\n".join(direct_urls) + "\n")
 
     print(f"[+] Wrote {SITEMAP_PATH} ({len(tasks)} tasks + root)")
     print(f"[+] Wrote {URLS_TXT_PATH} ({len(gh_urls)} URLs)")
     print(f"[+] Wrote {DIRECT_SITEMAP_PATH} ({len(direct_urls)} URLs)")
     print(f"[+] Wrote {DIRECT_URLS_TXT_PATH} ({len(direct_urls)} URLs)")
+
 
 
 def generate_index_html(tasks: list[dict]):
@@ -1154,8 +1191,7 @@ def generate_index_html(tasks: list[dict]):
 </body>
 </html>
 """
-    with open(INDEX_HTML_PATH, "w", encoding="utf-8") as f:
-        f.write(html_content)
+    write_if_changed(INDEX_HTML_PATH, html_content)
     print(f"[+] Wrote {INDEX_HTML_PATH}")
 
 
@@ -1215,22 +1251,16 @@ def main():
         full_task["gh_pages_url"] = f"{GH_PAGES_BASE}/tasks/{tid}"
         # Render HTML card
         html_content = render_html_page(full_task)
-        with open(html_file, "w", encoding="utf-8") as f:
-            f.write(html_content)
+        write_if_changed(html_file, html_content)
 
         full_tasks.append(full_task)
 
         if idx % 100 == 0 or idx == total:
             print(f"    Harvested {idx}/{total} tasks ({(idx/total)*100:.1f}%)...")
-            # Save checkpoint of JSONL
-            with open(JSONL_PATH, "w", encoding="utf-8") as f:
-                for t in full_tasks:
-                    f.write(json.dumps(t) + "\n")
 
     # Final JSONL write
-    with open(JSONL_PATH, "w", encoding="utf-8") as f:
-        for t in full_tasks:
-            f.write(json.dumps(t) + "\n")
+    jsonl_str = "".join(json.dumps(t) + "\n" for t in full_tasks)
+    write_if_changed(JSONL_PATH, jsonl_str)
     print(f"[+] Wrote {JSONL_PATH} with {len(full_tasks)} task records.")
 
     # Step 3: Write sitemaps
